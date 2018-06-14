@@ -8,4 +8,6 @@ server.use(prerender.sendPrerenderHeader());
 server.use(prerender.removeScriptTags());
 server.use(prerender.httpHeaders());
 
+server.use(require('prerender-redis-cache'));
+
 server.start();
